@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Cycle Animation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin: 20px;
+            color: #333;
+        }
+        #slideshow {
+            max-width: 80%;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .indicator {
+            font-size: 20px;
+            margin: 10px;
+            color: #555;
+        }
+        #summary {
+            max-width: 80%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #skipButton {
+            display: none;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #4CAF50;
+            transition: width 1s linear;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Cell Cycle Animation</h1>
+<img id="slideshow" src="" alt="Slideshow Image">
+<div class="indicator" id="phaseIndicator">Current Phase: </div>
+<div id="summary">
+    <div class="progress-bar" id="progressBar" style="width: 100%;"></div>
+    <div id="summaryText"></div>
+    <button id="skipButton">Skip</button>
+</div>
+
+<div>
+    <button id="pauseButton">Pause</button>
+    <button id="backButton">Back</button>
+    <button id="forwardButton">Forward</button>
+</div>
+
+<script src="cell_cycle_script.js"></script>
+
+</body>
+</html>
